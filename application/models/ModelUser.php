@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class ModelUser extend CI_Model
+class ModelUser extends CI_Model
 {
     public function simpanData($data = null)
     {
