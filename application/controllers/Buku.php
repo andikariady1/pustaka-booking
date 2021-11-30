@@ -2,6 +2,11 @@
 
 class Buku extends CI_Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+        cek_login();
+    }
     public function kategori()
     {
         $data['judul'] = 'Kategori Buku';
@@ -54,7 +59,7 @@ class Buku extends CI_Controller
             $this->load->view('templates/header', $data);
             $this->load->view('templates/sidebar', $data);
             $this->load->view('templates/topbar', $data);
-            $this->load->view('buku/kategori', $data);
+            $this->load->view('buku/ubah_kategori', $data);
             $this->load->view('templates/footer');
         } else {
 
